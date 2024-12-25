@@ -29,7 +29,7 @@ header{
     width: 90%;
 }
 .logo{
-    font-size: 2.5rem;
+    font-size: 50px;
     font-family: cursive;
     font-weight: 600;
     color: #00ffee;
@@ -157,14 +157,15 @@ main{
 
 
 #name {
-    font-size: 1.8rem;
+    font-size: 40px;
     color: #00ffee;
     font-style:oblique;
-    font-family:cursive;
+    font-family:'permanent Marker',cursive;
     font-weight:900;
 }
 
-#icon span{
+#icon span a{
+    color: white;
    margin: 1%;
     border: 1px solid white;
     padding: 10px;
@@ -172,7 +173,7 @@ main{
     display: inline-block;
 }
 
-#icon span:hover{
+#icon span a:hover{
 color: white;
  transition-duration: 0.5s;
  font-size: 1.6rem;
@@ -184,7 +185,8 @@ background-color: #00ffee;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .mainp4{
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 24px;
     font-weight:900 ;
 }
 .mainp5{
@@ -519,7 +521,7 @@ aside .part1{
     margin: 12px;
     border-radius: 20px;
 }
-#photo1,#photo2{
+#photo1,#photo2,#photo3{
     display: none;
 }
 #show{
@@ -758,7 +760,7 @@ font-family: monospace;
            
         }
         .html1 div svg, .html2 div svg, .html3 div svg, .html4 div svg{
-          padding-left:20% ;
+          padding-left:30% ;
 
         } 
         .container{
