@@ -1,7 +1,7 @@
 
 body{
     color: white;
-    background: conic-gradient(from 0deg ,#0a0a0a,#29c1df,#22413fa0,#2999df,#3684a6,#22413fa0,#29c1df,#0a0a0b);
+    background: conic-gradient(from 0deg ,#0c0c0cfa,#29c1df,#22413fa0,#2999df,#3684a6,#22413fa0,#29c1df,#0c0c0cfa);
     /* background: conic-gradient(from 0deg ,#d11149,#e68aff,#ff4800,#11ebff,#cdff58,#d11149); */
     padding: 8px;
 }
@@ -151,9 +151,7 @@ main{
 .mainp1{
     font-size: 1.3rem;
 }
-.main2 img:hover {
-    box-shadow: 0px 0px 25px 4px #00ffee;
-}
+
 
 
 #name {
@@ -345,6 +343,13 @@ article:hover{
     background-color: rgb(3, 3, 3,0.1);
    
   }
+  .article1 img{
+    border-radius: 20px;
+    z-index: -1;
+  }
+  #about{
+    background-color: rgb(15, 14, 14,0.1);
+  }
   .article2 h1{
    font-family: monospace;
    font-size: 3rem;
@@ -443,18 +448,30 @@ aside .part1{
 .html1 .container .progress::before{
     background: var(--clr);
     transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+    animation: first 2s 1;
+}
+@keyframes first {
+    from{
+          background: var(--clr);
+        transform: rotate(calc(((var(--i) - 50) * 0.0turn)));
+        
+    }
+    
 }
 .html2 .container .progress::before{
     background: var(--clr);
-    transform: rotate(calc(((var(--i) - 50) * 0.12turn)));
+    transform: rotate(calc(((var(--i) - 50) * 0.007turn)));
+    animation: first 2s 1;
 }
 .html3 .container .progress::before{
     background: var(--clr);
-    transform: rotate(calc(((var(--i) - 50) * 0.0turn)));
+    transform: rotate(calc(((var(--i) - 50) * 0.001turn)));
+    animation: first 2s 1;
 }
 .html4 .container .progress::before{
     background: var(--clr);
-    transform: rotate(calc(((var(--i) - 50) * 0.06turn)));
+    transform: rotate(calc(((var(--i) - 50) * 0.004turn)));
+    animation: first 2s 1;
 }
 
 
@@ -791,3 +808,171 @@ font-family: monospace;
             height: 70px;
         }
     }
+    .main2 img:hover{
+       
+        box-shadow: 0px 0px 25px 4px #00ffee;
+    }
+  /* Loading screen styles */
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  /* Logo animation */
+  .processlogo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: bounce 1.5s infinite, fade-in 1.5s forwards;
+    opacity: 0; /* Initially hidden */
+  }
+
+  /* Bouncing animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Fade-in animation */
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Spinner animation */
+  .spinner {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin: 14px;
+}
+
+.marquee {
+    display: inline-block;
+    animation: scroll 200s linear infinite;
+}
+.marquee span,.marquee2 span{
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(11, 10, 10,0.3);
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #00ffee;
+    
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.marquee2 {
+    display: inline-block;
+    animation: scroll2 200s linear infinite;
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+.marq{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 1px 0px 10px #00ffee;
+    transition-duration: 1s;
+    padding: 20px;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 1px 0px 10px #00ffee;
+    transition-duration: 1s;
+    padding: 20px;
+    margin: 2%;
+    background-color: rgb(12, 11, 11,0.2);
+
+}
+.main2{
+    animation: anim 2s 1;
+    animation-delay: 2.5s;
+}
+
+@keyframes anim{
+    from{
+        transform: translateX(0); color: transparent;
+    }
+    to{
+         transform: translateX(40px); color: white;
+    }
+}
+
+.logo:hover{
+    animation: tag 5s 1;
+    animation-delay:2.5 ;
+}
+@keyframes tag {
+   
+    
+    to{
+        transform: rotateX(180deg); 
+    }
+     
+}
+.main2 img:hover{
+    animation: photo 5s 1;
+    animation-delay: 2.5;
+}
+@keyframes photo{
+   
+    
+    to{
+       transform: rotateY(90deg); 
+    }
+    
+     
+}
